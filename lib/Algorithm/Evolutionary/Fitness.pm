@@ -5,7 +5,7 @@ use lib qw( ../../../../lib );
 
 =head1 NAME
 
-Algorithm::Evolutionary::Fitness::Base - Base class for fitness functions
+Algorithm::Evolutionary::Fitness - Base class for fitness functions
 
 =head1 SYNOPSIS
 
@@ -14,18 +14,18 @@ used to implement fitness functions.
 
 =head1 DESCRIPTION
 
-This module includes functionality that should be common to all fitness. Or at least it
+This module includes functionality that should be common to all fitness functions. Or at least it
 would be nice to have it in common. It counts the number of evaluations and includes a common API for caching evaluations.
 
 =head1 METHODS
 
 =cut
 
-package Algorithm::Evolutionary::Fitness::Base;
+package Algorithm::Evolutionary::Fitness;
 
 use Carp;
 
-our $VERSION = '3.1';
+our $VERSION = '1.0';
 
 
 =head2 new()
