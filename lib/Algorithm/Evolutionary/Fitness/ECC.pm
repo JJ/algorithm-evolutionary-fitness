@@ -16,6 +16,7 @@ Algorithm::Evolutionary::Fitness::ECC - Error Correcting codes problem generator
 =head1 DESCRIPTION
 
 Extracted from article "Effects of scale-free and small-world topologies on binary coded self-adaptive CEA", by Giacobini et al [Ga]. Quoting:
+
 "                                                    The ECC problem was presented in
 [MW]. We will consider a three-tuple (n, M, d), where n is the length of each codeword
 (number of bits), M is the number of codewords, and d is the minimum Hamming
@@ -38,7 +39,7 @@ computed by the algorithm"
 
 package Algorithm::Evolutionary::Fitness::ECC;
 
-our ($VERSION) = ( '$Revision: 3.2 $ ' =~ / (\d+\.\d+)/ ) ;
+our $VERSION = '3.2';
 
 use Carp qw(croak);
 
@@ -107,12 +108,6 @@ sub ecc {
   
   This file is released under the GPL. See the LICENSE file included in this distribution,
   or go to http://www.fsf.org/licenses/gpl.txt
-
-  CVS Info: $Date: 2009/07/24 10:25:49 $ 
-  $Header: /media/Backup/Repos/opeal/opeal/Algorithm-Evolutionary/lib/Algorithm/Evolutionary/Fitness/ECC.pm,v 3.2 2009/07/24 10:25:49 jmerelo Exp $ 
-  $Author: jmerelo $ 
-  $Revision: 3.2 $
-  $Name $
 
 =cut
 
