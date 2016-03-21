@@ -9,45 +9,33 @@ if ($ExtUtils::MakeMaker::VERSION > 6.64) {
         resources => {
             repository => {
                 type => 'git',
-                url  => 'https://github.com/JJ/Algorithm-Evolutionary.git',
-                web  => 'https://github.com/JJ/Algorithm-Evolutionary',
+                url  => 'https://github.com/JJ/algorithm-evolutionary-fitness.git',
+                web  => 'https://github.com/JJ/algorithm-evolutionary-fitness',
             },
         },
     };
 }
 
 WriteMakefile(
-    NAME                => 'Algorithm::Evolutionary',
-    AUTHOR              => 'JJ Merelo <jj /at/ merelo.net>',
-    VERSION_FROM        => 'lib/Algorithm/Evolutionary.pm',
-    ABSTRACT_FROM       => 'lib/Algorithm/Evolutionary.pm',
-    EXE_FILES => \@scripts,
-    LICENSE => 'gpl',
-    PL_FILES            => {},
-    PREREQ_PM => {'Algorithm::Permute' => 0.01,
-		  'Bit::Vector' => 0,
-		  'Clone' => 0.31,
-		  constant => 0,
-		  'GD' => 2.17,   
-		  'Math::Random' => 0.63,
-		  'Memoize' => 0, 
-		  'Object::Array' => 0,
-		  'Pod::Escapes' => '0', #Dependence from Test::Pod, but produces failure in 1 platform
-		  'Sort::Key' => 0,		  
-		  'Statistics::Basic' => 1.6,
-		  'String::Random' => 0,
-		  'Test::More' => 0,
-		  'Test::Pod' => 0,
-		  'Time::HiRes' => 0,
-		  'Tree::DAG_Node' => 1.04,
-		  'version'    => 0,
-		  'XML::Parser' => 2.40,
-		  'XML::Parser::Style::EasyTree' => 0,
-		  YAML => 0
-    },
-    dist                => { COMPRESS => 'gzip -9f', SUFFIX => 'gz' },
-    clean               => { FILES => 'Algorithm-Evolutionary-*' }
-    );
+	      NAME                => 'Algorithm::Evolutionary::Fitness',
+	      AUTHOR              => 'JJ Merelo <jj /at/ merelo.net>',
+	      VERSION_FROM        => 'lib/Algorithm/Evolutionary/Fitness.pm',
+	      ABSTRACT_FROM       => 'lib/Algorithm/Evolutionary/Fitness.pm',
+	      EXE_FILES => \@scripts,
+	      LICENSE => 'gpl',
+	      PL_FILES            => {},
+	      PREREQ_PM => {'Algorithm::Evolutionary::Utils' => 1.0,
+			    constant => 0,
+			    'Math::Random' => 0.63,
+			    'String::Random' => 0,
+			    'Test::More' => 0,
+			    'Test::Pod' => 0,
+			    'version'    => 0,
+			    YAML => 0
+			   },
+	      dist                => { COMPRESS => 'gzip -9f', SUFFIX => 'gz' },
+	      clean               => { FILES => 'Algorithm-Evolutionary-*' }
+	     );
 
 #Add new targets
 sub MY::postamble {
