@@ -34,7 +34,7 @@ use Carp qw(croak);
 
 use lib qw(../../.. ../.. ..);
 
-use base qw(Algorithm::Evolutionary::Fitness::Base);
+use base qw(Algorithm::Evolutionary::Fitness);
 
 =head2 new( $fitness_function, [ $rng = random_normal( 1, 0, 1 ) ]
 

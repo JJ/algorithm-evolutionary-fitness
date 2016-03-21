@@ -35,7 +35,7 @@ package Algorithm::Evolutionary::Fitness::Any;
 
 use Carp;
 
-use base 'Algorithm::Evolutionary::Fitness::Base';
+use base 'Algorithm::Evolutionary::Fitness';
 
 our $VERSION =  '3.2';
 

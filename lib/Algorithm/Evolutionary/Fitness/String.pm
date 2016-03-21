@@ -31,8 +31,7 @@ package Algorithm::Evolutionary::Fitness::String;
 our $VERSION =  '3.0' ;
 
 use Carp qw( croak );
-use base qw(Algorithm::Evolutionary::Fitness::Base);
-
+use base qw(Algorithm::Evolutionary::Fitness);
 
 =head2 new()
 

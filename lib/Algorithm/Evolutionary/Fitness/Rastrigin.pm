@@ -26,7 +26,7 @@ package Algorithm::Evolutionary::Fitness::Rastrigin;
 our ($VERSION) = ( '$Revision: 3.3 $ ' =~ / (\d+\.\d+)/ ) ;
 
 use Carp qw( croak );
-use base qw(Algorithm::Evolutionary::Fitness::Base);
+use base qw(Algorithm::Evolutionary::Fitness);
 use constant PI2    => 8 * atan2(1, 1);
 use constant RASTRIGIN_A => 10;
 

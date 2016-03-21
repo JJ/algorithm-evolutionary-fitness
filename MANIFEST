@@ -9,7 +9,7 @@ lib/Algorithm/Evolutionary/Fitness/Base.pm
 lib/Algorithm/Evolutionary/Fitness/String.pm
 lib/Algorithm/Evolutionary/Fitness/MMDP.pm
 lib/Algorithm/Evolutionary/Fitness/P_Peaks.pm
-lib/Algorithm/Evolutionary/Fitness/wP_Peaks.pm
+lib/Algorithm/Evolutionary/Fitness/wP_Peaks.pmA	
 lib/Algorithm/Evolutionary/Fitness/Knapsack.pm
 lib/Algorithm/Evolutionary/Fitness/ONEMAX.pm
 lib/Algorithm/Evolutionary/Fitness/Royal_Road.pm
@@ -29,4 +29,5 @@ t/0306-any.t
 t/0307-rastrigin.t
 t/0307-zdt1.t
 t/0333-mmdp.t
+
 
