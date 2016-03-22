@@ -7,6 +7,4 @@ perl:
   - "5.18"
   - "5.20"
   - "5.22"
-before_install: 
-  - sudo apt-get install libgd2-xpm-dev 
 script: "perl Makefile.PL && make disttest"

@@ -30,6 +30,7 @@ WriteMakefile(
 			    'String::Random' => 0,
 			    'Test::More' => 0,
 			    'Test::Pod' => 0,
+			    'Test::Exception' => 0,
 			    'version'    => 0,
 			    YAML => 0
 			   },

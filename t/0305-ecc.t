@@ -1,12 +1,7 @@
 #-*-cperl-*-
-# Before `make install' is performed this script should be runnable with
-# `make test'. After `make install' it should work as `perl test.pl'
 
-#########################
-
-# change 'tests => 1' to 'tests => last_test_to_print';
-
-use Test::More tests => 3;
+use Test::More;
+use Test::Exception;
 
 use warnings;
 use strict;
@@ -23,6 +18,13 @@ my $min_distance = 1;
 my $ecc = new Algorithm::Evolutionary::Fitness::ECC( $number_of_codewords, $min_distance );
 isa_ok( $ecc,  "Algorithm::Evolutionary::Fitness::ECC" );
 
+throws_ok { new Algorithm::Evolutionary::Fitness::ECC()  } qr/codewords/, "No codewords";
+throws_ok { new Algorithm::Evolutionary::Fitness::ECC(2,0)  } qr/istance/, "No distance";
+
+
 my $string = random_bitstring(128);
 ok( $ecc->ecc( $string ) > 0, "Seems to work" );
-
+ok( $ecc->ecc( $string ) > 0, "Seems to work again" );
+$string = random_bitstring(128);
+ok( $ecc->ecc( $string ) > 0, "Keeps working" );
+done_testing();
