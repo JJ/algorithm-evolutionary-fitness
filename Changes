@@ -1,5 +1,7 @@
 2016-03-22  JJ Merelo  <jmerelo@flash>
 
+	* lib/Algorithm/Evolutionary/Fitness.pm: Makes all tests pass 
+
 	* t/0305-ecc.t: Improved coverage for tests and finished refactoring for spinning it off.
 
 2013-01-06  Juan J. Merelo Guervós  <jjmerelo@gmail.com>
