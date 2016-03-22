@@ -77,12 +77,6 @@ sub Rastrigin {
   This file is released under the GPL. See the LICENSE file included in this distribution,
   or go to http://www.fsf.org/licenses/gpl.txt
 
-  CVS Info: $Date: 2010/09/28 19:41:26 $ 
-  $Header: /media/Backup/Repos/opeal/opeal/Algorithm-Evolutionary/lib/Algorithm/Evolutionary/Fitness/Rastrigin.pm,v 3.3 2010/09/28 19:41:26 jmerelo Exp $ 
-  $Author: jmerelo $ 
-  $Revision: 3.3 $
-  $Name $
-
 =cut
 
 "Pi squared???";

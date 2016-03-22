@@ -85,12 +85,6 @@ sub royal_road {
   This file is released under the GPL. See the LICENSE file included in this distribution,
   or go to http://www.fsf.org/licenses/gpl.txt
 
-  CVS Info: $Date: 2009/07/28 11:30:56 $ 
-  $Header: /media/Backup/Repos/opeal/opeal/Algorithm-Evolutionary/lib/Algorithm/Evolutionary/Fitness/Royal_Road.pm,v 3.1 2009/07/28 11:30:56 jmerelo Exp $ 
-  $Author: jmerelo $ 
-  $Revision: 3.1 $
-  $Name $
-
 =cut
 
 "What???";

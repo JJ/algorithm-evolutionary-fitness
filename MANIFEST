@@ -18,12 +18,12 @@ lib/Algorithm/Evolutionary/Fitness/Trap.pm
 lib/Algorithm/Evolutionary/Fitness/ZDT1.pm
 lib/Algorithm/Evolutionary/Fitness/Rastrigin.pm
 t/00-load.t
+t/01-onemax.t
+t/02-trap.t
 t/0300-ppeaks.t
 t/0301-wppeaks.t
 t/0302-knapsack.t
-t/0303-onemax.t
 t/0304-royalroad.t
-t/0304-trap.t
 t/0305-ecc.t
 t/0306-any.t
 t/0307-rastrigin.t
