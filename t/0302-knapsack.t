@@ -4,13 +4,14 @@
 
 #########################
 
-use Test::More tests => 5;
+use Test::More;
 
 use warnings;
 use strict;
 
 use lib qw( ../../lib ../lib lib ); #Just in case we are testing it in-place
-use Algorithm::Evolutionary::Individual::BitString;
+
+use Algorithm::Evolutionary::Utils qw(random_bitstring);
 
 use_ok( "Algorithm::Evolutionary::Fitness::Knapsack", "using A::E::Fitness::Knapsack OK" );
 
@@ -25,8 +26,9 @@ my $rho=5.0625; #Penalizations coeficient
 my $knap = new Algorithm::Evolutionary::Fitness::Knapsack( $Nmax, $capacity, $rho, \@profits, \@weights );
 isa_ok( $knap,  "Algorithm::Evolutionary::Fitness::Knapsack" );
 
-my $indi = new Algorithm::Evolutionary::Individual::BitString $Nmax ; # Build random bitstring with length 10
+my $indi = random_bitstring $Nmax, 1 ; # Build random bitstring with length 10
 ok( $knap->_apply( $indi ) > 0, "Works on indis" );
 ok( $knap->knapsack( $indi->{'_str'})  > 0, "Works on strings and caches" );
 ok( $knap->cached_evals() == 1, "Cached evals OK");
 
+done_testing();
