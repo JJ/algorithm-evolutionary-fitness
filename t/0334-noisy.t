@@ -2,7 +2,7 @@
 
 #Test the MMDP fitness function
 
-use Test::More ;
+use Test::More; # No plan
 
 use warnings;
 use strict;

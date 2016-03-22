@@ -84,7 +84,7 @@ sub _apply {
 =head2 evaluations() 
 
 Returns the number of evaluations made with this object. Useful for
-collecting stats
+collecting stats, but it's up to the offspring to update it by using apply (which could make it slower anyway). 
 
 =cut
 
@@ -112,7 +112,7 @@ Returns a reference to the internal evaluations cache. Not very encapsulated, bu
 
 sub cache {
     my $self = shift;
-    return $self->{'cache'};
+    return $self->{'_cache'};
 }
 
 =head1 Known subclasses

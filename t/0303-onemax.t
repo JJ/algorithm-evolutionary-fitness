@@ -4,7 +4,7 @@
 
 #########################
 
-use Test::More tests => 7;
+use Test::More; # No plan
 
 use warnings;
 use strict;
@@ -27,4 +27,7 @@ ok( $om->onemax( $string) == 11, "OK count 1" );
 ok( $string == $copy, "String not affected" );
 $string = "010111101111110";
 ok( $om->onemax( $string ) == 11, "OK count 2" );
-
+$om->reset_evaluations();
+ok( $om->evaluations() == 0, "Evaluations reset");
+ok( scalar keys %{$om->cache()} > 0, "Cache used" );
+done_testing();
