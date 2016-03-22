@@ -24,7 +24,7 @@ WriteMakefile(
 	      EXE_FILES => \@scripts,
 	      LICENSE => 'gpl',
 	      PL_FILES            => {},
-	      PREREQ_PM => {'Algorithm::Evolutionary::Utils' => 3.401,
+	      PREREQ_PM => {'Algorithm::Evolutionary::Utils' => 3.403,
 			    constant => 0,
 			    'Math::Random' => 0.63,
 			    'String::Random' => 0,

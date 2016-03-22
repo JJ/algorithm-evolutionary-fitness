@@ -1,12 +1,6 @@
 #-*-cperl-*-
-# Before `make install' is performed this script should be runnable with
-# `make test'. After `make install' it should work as `perl test.pl'
 
-#########################
-
-# change 'tests => 1' to 'tests => last_test_to_print';
-
-use Test::More tests => 22;
+use Test::More;
 
 use warnings;
 use strict;
@@ -36,3 +30,5 @@ for ( my $i = 0; $i < 16; $i++ ) {
   my $resultado = $new_trap->trap( $binary );
   ok( $resultado >= 0, "Result for $binary is $resultado" );
 }
+
+done_testing();

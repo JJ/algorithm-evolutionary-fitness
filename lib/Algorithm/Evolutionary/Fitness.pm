@@ -25,7 +25,7 @@ package Algorithm::Evolutionary::Fitness;
 
 use Carp;
 
-our $VERSION = '1.0';
+use version; our $VERSION = qv("v3.101");
 
 
 =head2 new()
