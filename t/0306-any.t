@@ -7,7 +7,6 @@ use strict;
 
 use lib qw( ../../lib ../lib lib ); #Just in case we are testing it in-place
 
-use Algorithm::Evolutionary::Individual::BitString;
 use Algorithm::Evolutionary::Utils qw(random_bitstring decode_string);
 
 use_ok( "Algorithm::Evolutionary::Fitness::Any", "using Fitness::Any OK" );
