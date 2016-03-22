@@ -9,8 +9,8 @@ use Test::More tests => 7;
 use warnings;
 use strict;
 
-use lib qw( ../../lib ../lib lib ); #Just in case we are testing it in-place
-use Algorithm::Evolutionary::Individual::BitString;
+use lib qw( ../../algorithm-evolutionary-utils/lib ../../lib ../lib lib ); #Just in case we are testing it in-place
+use Algorithm::Evolutionary::Utils qw(random_bitstring);
 
 use_ok( "Algorithm::Evolutionary::Fitness::ONEMAX", "using A::E::Fitness::ONEMAX OK" );
 
@@ -18,7 +18,7 @@ my $om = new Algorithm::Evolutionary::Fitness::ONEMAX;
 isa_ok( $om,  "Algorithm::Evolutionary::Fitness::ONEMAX" );
 
 my $num_bits = 32;
-my $indi = new Algorithm::Evolutionary::Individual::BitString $num_bits ; # Build random bitstring with length 10
+my $indi = random_bitstring( $num_bits, 1) ; # Build random bitstring with length 10
 ok( $om->_apply( $indi ) > 0, "Works on indis" );
 ok( $om->onemax( $indi->{'_str'})  > 0, "Works on strings" );
 my $string = "11111111111";
