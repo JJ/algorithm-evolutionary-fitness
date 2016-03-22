@@ -1,12 +1,6 @@
 #-*-cperl-*-
-# Before `make install' is performed this script should be runnable with
-# `make test'. After `make install' it should work as `perl test.pl'
 
-#########################
-
-# change 'tests => 1' to 'tests => last_test_to_print';
-
-use Test::More tests => 3;
+use Test::More;
 
 use warnings;
 use strict;
@@ -31,6 +25,7 @@ my $any_eval = new Algorithm::Evolutionary::Fitness::Any \&squares;
 
 isa_ok( $any_eval,  "Algorithm::Evolutionary::Fitness::Any" );
 
-my $chrom = Algorithm::Evolutionary::Individual::BitString->fromString( $string );
+my $chrom = { '_str' => $string };
 ok( $any_eval->apply( $chrom ) == $resultado, "Seems to work" );
 
+done_testing();

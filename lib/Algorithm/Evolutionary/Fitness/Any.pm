@@ -77,7 +77,7 @@ function to each individual. Itis cached for efficiency.
 sub _apply {
   my $self = shift;
   my $individual = shift || croak "Nobody here!";
-  my $chrom = $individual->Chrom();
+  my $chrom = $individual->{'_str'};
   my $cache = $self->{'_cache'};
   if ( $cache->{$chrom} ) {
     return $cache->{$chrom};
